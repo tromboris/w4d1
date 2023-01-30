@@ -1,8 +1,9 @@
-class KnightPathfinder
+class PolyTreeNode
     attr_reader :start_pos, :all_pos
     def initialize(arr)
         throw "not valid position" if !(0...8).to_a.include?(arr[0]) || !(0...8).to_a.include?(arr[1]) 
-        @start_pos = arr
+        @root_node = arr
+        # @start_pos = arr
         @all_pos = path_generator(arr)
     end
 
